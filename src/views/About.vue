@@ -1,5 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>Welcome to world of Kusatsu</h1>
+    This app is sample of Vue.js
   </div>
 </template>
