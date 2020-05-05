@@ -1,18 +1,32 @@
 <template>
   <div>
-    <h1>{{ title }}</h1>
     <div v-if="detail">
-      <img :src="detail.img" />
-      <p>{{detail.head}}</p>
+      <b-card
+        img-top
+        :title="title"
+        :img-src="detail.img"
+        :img-alt="title"
+        tag="article"
+        class="mb-2"
+        align="left"
+      >
+        <b-card-text>{{detail.head}}</b-card-text>
 
-      <a :href="'https://ja.wikipedia.org' + entry.link" target="_blank">出典: Wikipedia: {{detail.title}}</a>
-
+        <b-button
+          :href="'https://ja.wikipedia.org' + entry.link"
+          target="_blank"
+          variant="primary"
+        >Wikipediaで開く</b-button>
+      </b-card>
     </div>
 
-
-    <p v-else>Loading ... {{ entry.link }}</p>
+    <div v-else>
+      <b-spinner variant="success" type="grow" label="Spinning"></b-spinner>
+      <p>Loading ... {{title}}</p>
+    </div>
   </div>
 </template>
+
 
 <script>
 import Kusatsu from "@/api/932.js";

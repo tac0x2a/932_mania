@@ -36,7 +36,6 @@ let parseDetail = (body) => {
 
 export default {
   listKusatsu(callback) {
-    console.log('listKusatsu');
     axios.get(KusatsuListURL).then((response) => {
       let list = parseList(response.data);
       callback(list);
