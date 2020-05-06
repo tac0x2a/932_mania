@@ -1,8 +1,8 @@
 <template>
   <div class="home">
-    <h1>kusatsumania IIDX</h1>
+    <h1>932mania IIDX</h1>
     <div v-if="showList">
-      <b-form-input v-model="query" placeholder="絞り込み"></b-form-input>
+      <b-form-input v-model="query" placeholder="Search..."></b-form-input>
 
       <b-row v-for="entry in showList" :key="entry.title">
         <b-col>
@@ -11,8 +11,7 @@
               name: 'Kusatsu',
               params: { title: entry.title, entry: entry }
             }"
-            >{{ entry.title }}</router-link
-          >
+          >{{ entry.title }}</router-link>
         </b-col>
       </b-row>
     </div>
