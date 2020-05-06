@@ -13,11 +13,11 @@
         <b-card-text>{{ detail.head }}</b-card-text>
 
         <b-button
+          block
           :href="'https://ja.wikipedia.org' + entry.link"
           target="_blank"
-          variant="primary"
-          >Wikipediaで開く</b-button
-        >
+          variant="success"
+        >Wikipediaで開く</b-button>
       </b-card>
     </div>
 
