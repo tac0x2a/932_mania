@@ -1,4 +1,10 @@
 module.exports = {
+  pages: {
+    index: {
+      entry: "src/main.js",
+      title: "932mania"
+    }
+  },
   devServer: {
     proxy: {
       "/kusatsuList": {

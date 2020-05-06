@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Kusatsu</router-link> |
+      <router-link to="/">932</router-link>|
       <router-link to="/about">About</router-link>
     </div>
     <b-container>

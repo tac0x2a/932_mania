@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <b-jumbotron header-level="5" header="932mania IIDX" lead="Welcome to world of Kusatsu...">
+    <b-jumbotron header-level="5" header="932mania" lead="Welcome to world of Kusatsu...">
       <a href="https://github.com/tac0x2a" target="_blank">
         <b-avatar
           size="4rem"

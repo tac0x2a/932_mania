@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>932mania IIDX</h1>
+    <h1>932mania</h1>
     <div v-if="showList">
       <b-form-input v-model="query" placeholder="Search..."></b-form-input>
 
