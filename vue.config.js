@@ -2,10 +2,10 @@ module.exports = {
   devServer: {
     proxy: {
       "/kusatsuList": {
-        target: "http://localhost:5001/mania-85038/us-central1",
+        target: "http://localhost:5000" // local firebase function
       },
       "/kusatsuDetail": {
-        target: "http://localhost:5001/mania-85038/us-central1",
+        target: "http://localhost:5000" // local firebase function
       }
     }
   }
