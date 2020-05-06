@@ -2,16 +2,19 @@
   <div class="home">
     <h1>kusatsumania IIDX</h1>
     <div v-if="showList">
-        <b-form-input v-model="query" placeholder="絞り込み"></b-form-input>
+      <b-form-input v-model="query" placeholder="絞り込み"></b-form-input>
 
-        <b-row v-for="entry in showList" :key="entry.title">
-          <b-col>
-            <router-link :to="{ name: 'Kusatsu', params: { title: entry.title, entry: entry } }">
-              {{ entry.title }}
-            </router-link>
-          </b-col>
-        </b-row>
-
+      <b-row v-for="entry in showList" :key="entry.title">
+        <b-col>
+          <router-link
+            :to="{
+              name: 'Kusatsu',
+              params: { title: entry.title, entry: entry }
+            }"
+            >{{ entry.title }}</router-link
+          >
+        </b-col>
+      </b-row>
     </div>
 
     <div v-else>
@@ -29,23 +32,25 @@ export default {
   components: {},
   data() {
     return {
-      query: "",
+      query: ""
       // kusatsuList: null
     };
   },
   mounted() {
     Kusatsu.listKusatsu(res => {
-      this.$store.commit('kusatsuList', res)
+      this.$store.commit("kusatsuList", res);
     });
   },
   computed: {
-    kusatsuList(){
-      return this.$store.state.kusatsuList
+    kusatsuList() {
+      return this.$store.state.kusatsuList;
     },
-    showList(){
-      if(!this.kusatsuList) return this.kusatsuList;
-      if(this.query.strip === "") return this.kusatsuList;
-      return this.kusatsuList.filter(t => t.title.toLowerCase().includes(this.query.toLowerCase()));
+    showList() {
+      if (!this.kusatsuList) return this.kusatsuList;
+      if (this.query.strip === "") return this.kusatsuList;
+      return this.kusatsuList.filter(t =>
+        t.title.toLowerCase().includes(this.query.toLowerCase())
+      );
     }
   }
 };

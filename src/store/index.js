@@ -8,8 +8,8 @@ export default new Vuex.Store({
     kusatsuList: null
   },
   mutations: {
-    kusatsuList(state, payload){
-      state.kusatsuList = payload
+    kusatsuList(state, payload) {
+      state.kusatsuList = payload;
     }
   },
   actions: {},
