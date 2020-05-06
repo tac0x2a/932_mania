@@ -1,8 +1,11 @@
 module.exports = {
   devServer: {
     proxy: {
-      "/wiki": {
-        target: "https://ja.wikipedia.org",
+      "/kusatsuList": {
+        target: "http://localhost:5001/mania-85038/us-central1",
+      },
+      "/kusatsuDetail": {
+        target: "http://localhost:5001/mania-85038/us-central1",
       }
     }
   }

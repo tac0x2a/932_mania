@@ -30,15 +30,18 @@ export default {
   data() {
     return {
       query: "",
-      kusatsuList: null
+      // kusatsuList: null
     };
   },
   mounted() {
     Kusatsu.listKusatsu(res => {
-      this.kusatsuList = res;
+      this.$store.commit('kusatsuList', res)
     });
   },
   computed: {
+    kusatsuList(){
+      return this.$store.state.kusatsuList
+    },
     showList(){
       if(!this.kusatsuList) return this.kusatsuList;
       if(this.query.strip === "") return this.kusatsuList;
