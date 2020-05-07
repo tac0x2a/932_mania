@@ -4,7 +4,6 @@
       <a href="https://github.com/tac0x2a" target="_blank">
         <b-avatar
           size="6rem"
-          class="mr-4"
           variant="secondary"
           rounded="lg"
           src="https://avatars0.githubusercontent.com/u/245998?s=460&u=63bc2262bc711e327e55ad10a6eeafba195a644b&v=4"
